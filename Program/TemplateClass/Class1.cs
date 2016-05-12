@@ -21,6 +21,15 @@ namespace TemplateClassNameSpace
             return text;
         }
 
+        public string WordFind()
+        {
+            string word = "";
+            int pos1 = text.IndexOf("{");
+            int pos2 = text.IndexOf("}");
+            word = text.Substring(pos1, (pos2 - pos1) + 1);
+
+            return word;
+        }
 
     }
 }
