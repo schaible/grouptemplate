@@ -8,13 +8,18 @@ namespace TemplateClassNameSpace
 {
     public class TemplateClass
     {
-        public string text;
+        public string text = "";
 
         public TemplateClass(string input)
         {
            text = input;
         }
 
+        public string WordSwap()
+        {
+            text = text.Replace("Hi", "See");
+            return text;
+        }
 
 
     }

@@ -18,6 +18,14 @@ namespace TemplateSpec
             TemplateClass temp = new TemplateClass("Hi ya");
             Assert.AreEqual(temp.text,"Hi ya");
         }
+
+        [TestMethod]
+        public void Replace_Hi_With_See()
+        {
+            TemplateClass temp = new TemplateClass("Hi ya");
+            string result = temp.WordSwap();
+            Assert.AreEqual(result, "See ya");
+        }
     }
 }
 
