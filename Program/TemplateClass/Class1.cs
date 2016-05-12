@@ -9,6 +9,8 @@ namespace TemplateClassNameSpace
     public class TemplateClass
     {
         public string text = "";
+        public string replacement = "";
+        public string word = "";
 
         public TemplateClass(string input)
         {
@@ -23,15 +25,27 @@ namespace TemplateClassNameSpace
 
         public string WordFind()
         {
-            string word = "";
+            word = "";
             int pos1 = text.IndexOf("{");
             int pos2 = text.IndexOf("}");
             word = text.Substring(pos1, (pos2 - pos1) + 1);
-
-            text = text.Replace(word, "yeah");
+            Get_Replacement();
+            text = text.Replace(word, replacement);
             
             return text;
         }
+
+        public string Get_Replacement()
+        {
+            Console.WriteLine("what would you like to replace " + word +" with?" );
+            replacement = Console.ReadLine();
+
+            return replacement;
+
+        }
+
+
+
 
     }
 }

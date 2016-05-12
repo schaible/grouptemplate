@@ -68,6 +68,15 @@ namespace TemplateSpec
             result = temp.WordFind();
             Assert.AreEqual(result, "Hi ya, yeah ya, Hi yeah");
         }
+
+        [TestMethod]
+        public void Revieve_And_Replace_With_Input()
+        {
+            TemplateClass temp = new TemplateClass("Hi ya, {Hi} ya, Hi {ya}");
+            string result = temp.WordFind();
+            result = temp.WordFind();
+            Assert.AreEqual(result, "Hi ya, yeah ya, Hi yeah");
+        }
     }
 }
 

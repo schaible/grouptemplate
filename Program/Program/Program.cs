@@ -10,6 +10,10 @@ namespace Program
     {
         static void Main(string[] args)
         {
+            TemplateClass trial = new TemplateClass("my name is {name} my age is {age}");
+            trial.WordFind();
+            Console.WriteLine(trial.WordFind());
+            Console.ReadLine();
         }
     }
 }
