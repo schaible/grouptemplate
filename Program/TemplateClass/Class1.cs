@@ -8,5 +8,14 @@ namespace TemplateClassNameSpace
 {
     public class TemplateClass
     {
+        public string text;
+
+        public TemplateClass(string input)
+        {
+           text = input;
+        }
+
+
+
     }
 }
