@@ -28,7 +28,9 @@ namespace TemplateClassNameSpace
             int pos2 = text.IndexOf("}");
             word = text.Substring(pos1, (pos2 - pos1) + 1);
 
-            return word;
+            text = text.Replace(word, "yeah");
+            
+            return text;
         }
 
     }
